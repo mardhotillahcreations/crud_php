@@ -21,7 +21,9 @@ function delete_alert(id) {
         swal({
             title: "Yuhu!", 
             text: "Your data is safe!",
-            icon: "success", 
+            icon: "success",
+            buttons: false, 
+            timer: 2000, 
         });
       }
     });
