@@ -38,13 +38,14 @@ if ($result->num_rows > 0) {
         </nav>
         <div class="container">
           <h3 class="mt-4 mb-4">Edit Students</h3>
-          <form action="edit-process.php" method="post">
+          <form action="edit-process.php" method="post" name="myForm" onsubmit="return(validate());">
             <input type="hidden" name="students_id" value="<?= $row['students_id'] ?>">
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
                   <label for="students_name">Name</label>
                   <input type="text" class="form-control" id="students_name" name="students_name" value="<?= $row['students_name'] ?>" placeholder="Students name">
+                  <small class="text-danger" id="error_name"></small>
                 </div>
               </div>
             </div>
@@ -53,6 +54,7 @@ if ($result->num_rows > 0) {
                 <div class="form-group">
                   <label for="students_address">Address</label>
                   <input type="text" class="form-control" id="students_address" name="students_address" value="<?= $row['students_address'] ?>" placeholder="Students address">
+                  <small class="text-danger" id="error_email"></small>
                 </div>
               </div>
             </div>
@@ -61,6 +63,7 @@ if ($result->num_rows > 0) {
                 <div class="form-group">
                   <label for="students_phone">Phone</label>
                   <input type="text" class="form-control" id="students_phone" name="students_phone" value="<?= $row['students_phone'] ?>" placeholder="Students phone">
+                  <small class="text-danger" id="error_phone"></small>
                 </div>
               </div>
             </div>
@@ -68,8 +71,10 @@ if ($result->num_rows > 0) {
             <a href="index.php" class="btn btn-outline-primary">Back</a>
           </form>  
         </div>
+        <?php $acak = rand(10,1000); ?>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="myLearn.js?acak=<?= $acak; ?>"></script>
     </body>
 </html>
