@@ -1,5 +1,5 @@
 <?php  
-require_once 'connection.php';
+require_once 'config/connection.php';
 
 $students_id = $_GET['id'];
 
@@ -7,7 +7,7 @@ $students_id = $_GET['id'];
 $sql = "DELETE FROM students WHERE students_id = $students_id ";
 
 if ($conn->query($sql) === TRUE) {
-  header('location: index.php');
+  header('location: students.php');
 } else {
   echo "Error deleting record: " . $conn->error;
 }

@@ -1,5 +1,5 @@
 <?php
-require_once 'connection.php';
+require_once 'config/connection.php';
 
 $students_name = $_POST['students_name'];
 $students_address = $_POST['students_address'];
@@ -9,7 +9,7 @@ $sql = "INSERT INTO students (students_name, students_phone, students_address)
         VALUES ('$students_name', '$students_phone', '$students_address')";
 
 if ($conn->query($sql) === TRUE) {
-  header('location: index.php');
+  header('location: students.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

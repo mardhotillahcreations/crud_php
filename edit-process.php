@@ -1,5 +1,5 @@
 <?php  
-require_once 'connection.php';
+require_once 'config/connection.php';
 
 $students_id = $_POST['students_id'];
 $students_name = $_POST['students_name'];
@@ -12,7 +12,7 @@ $sql = "UPDATE students SET students_name = '$students_name',
                         WHERE students_id = '$students_id'";
 
 if ($conn->query($sql) === TRUE) {
-  header('location: index.php');
+  header('location: students.php');
 } else {
   echo "Error updating record: " . $conn->error;
 }
