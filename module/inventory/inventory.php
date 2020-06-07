@@ -1,6 +1,6 @@
-<?php require_once 'config/connection.php'; ?>
-<?php require_once 'parts/header-page.php'; ?>
-<?php require_once 'parts/nav-page.php'; ?>
+<?php require_once '../../config/connection.php'; ?>
+<?php require_once '../../parts/header-page.php'; ?>
+<?php require_once '../../parts/nav-page.php'; ?>
   <div class="container">
       <a href="add.php" class="btn btn-outline-primary mt-4">Add New Stundets</a>
       <table class="table table-striped table-hover mt-4">
@@ -42,4 +42,4 @@
         </tbody>
       </table>
   </div>
-<?php require_once 'parts/footer-page.php'; ?>
+<?php require_once '../../parts/footer-page.php'; ?>

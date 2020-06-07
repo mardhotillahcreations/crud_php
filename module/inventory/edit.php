@@ -1,5 +1,5 @@
 <?php 
-require_once 'config/connection.php'; 
+require_once '../../config/connection.php'; 
 
 $students_id = $_GET['id'];
 
@@ -12,8 +12,8 @@ if ($result->num_rows > 0) {
 }
 
 ?>
-<?php require_once 'parts/nav-page.php'; ?>
-<?php require_once 'parts/header-page.php'; ?>
+<?php require_once '../../parts/nav-page.php'; ?>
+<?php require_once '../../parts/header-page.php'; ?>
   <div class="container">
     <h3 class="mt-4 mb-4">Edit Students</h3>
     <form action="edit-process.php" method="post" name="myForm" onsubmit="return(validate());">
@@ -49,4 +49,4 @@ if ($result->num_rows > 0) {
       <a href="index.php" class="btn btn-outline-primary">Back</a>
     </form>  
   </div>
-<?php require_once 'parts/footer-page.php'; ?>
+<?php require_once '../../parts/footer-page.php'; ?>

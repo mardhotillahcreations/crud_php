@@ -1,5 +1,5 @@
 <?php  
-require_once 'config/connection.php';
+require_once '../../config/connection.php';
 
 $students_id = $_POST['students_id'];
 $students_name = $_POST['students_name'];
